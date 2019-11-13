@@ -1,6 +1,6 @@
 {
   "name": "image-drag-and-scale",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is a library that allows you to drag and scale an image within a div element",
   "author": "lgdelacruz92",
   "license": "MIT",

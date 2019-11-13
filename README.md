@@ -13,16 +13,30 @@ npm install --save image-drag-and-scale
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from "react";
+import Image from "image-drag-and-scale";
+import "./styles.css";
 
-import MyComponent from 'image-drag-and-scale'
-
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
+function App() {
+  const imageData = {
+    x: 400,
+    y: 200,
+    translateX: 0,
+    translateY: 0,
+    scaledWidth: 100,
+    scaledHeight: 100,
+    width: 100,
+    height: 100,
+    src: "https://source.unsplash.com/random/1000x1000",
+    alt: "random",
+    id: "124",
+    index: 2
+  };
+  return (
+    <div className="App">
+      <Image data={imageData} />
+    </div>
+  );
 }
 ```
 
