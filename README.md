@@ -34,6 +34,9 @@ function App() {
     id: "124",
     index: 2
   };
+
+  const containerRef = React.useRef();
+
   return (
     <div className="App">
       <div ref={containerRef} className="container">
