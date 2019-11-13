@@ -1,8 +1,0 @@
-{
-  "short_name": "image-drag-and-scale",
-  "name": "image-drag-and-scale",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
