@@ -20,7 +20,7 @@ const useStyles = MaterialUI.makeStyles(theme => {
 });
 
 const Image = props => {
-  const { data, containerRef } = props;
+  const { data } = props;
   const [state, setState] = React.useState({
     data: data,
     status: null,
@@ -95,7 +95,7 @@ const Image = props => {
       document.removeEventListener("mousedown", onMouseDown);
       document.removeEventListener("mousemove", onMouseMove);
     };
-  }, [data, state.imageId, containerRef]);
+  }, [data, state.imageId]);
 
   return (
     <div className={classes.container}>

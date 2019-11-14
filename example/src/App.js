@@ -17,8 +17,6 @@ const App = props => {
     index: 2
   };
 
-  const containerRef = React.useRef();
-
   return (
     <div className="App">
       <div
