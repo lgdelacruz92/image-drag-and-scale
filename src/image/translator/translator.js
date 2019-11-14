@@ -5,14 +5,12 @@ const useStyles = MaterialUI.makeStyles(theme => {
   return {
     translator: {
       fontSize: 0,
-      display: "inline-block",
-      transform: props => `translate(${props.x}px, ${props.y}px)`,
-      position: "relative"
+      position: "absolute",
+      transform: props => `translate(${props.x}px, ${props.y}px)`
     },
     overlay: {
       position: "absolute",
-      top: props => props.y + props.translateY + 5,
-      left: props => props.x + props.translateX + 5,
+      transform: props => `translate(${props.x + 5}px,${props.y + 5}px)`,
       width: props => props.scaledWidth - 10,
       height: props => props.scaledHeight - 10,
       pointerEvents: "auto",

@@ -5,11 +5,6 @@ import Translator, { handleTranslate } from "./translator";
 
 const useStyles = MaterialUI.makeStyles(theme => {
   return {
-    container: {
-      width: 0,
-      height: 0,
-      pointerEvents: "none"
-    },
     img: {
       display: "inline-block",
       width: "100%",
@@ -98,17 +93,15 @@ const Image = props => {
   }, [data, state.imageId]);
 
   return (
-    <div className={classes.container}>
-      <Translator data={state}>
-        <Transformer data={state}>
-          <img
-            className={classes.img}
-            src={state.data.src}
-            alt={state.data.alt}
-          />
-        </Transformer>
-      </Translator>
-    </div>
+    <Translator data={state}>
+      <Transformer data={state}>
+        <img
+          className={classes.img}
+          src={state.data.src}
+          alt={state.data.alt}
+        />
+      </Transformer>
+    </Translator>
   );
 };
 

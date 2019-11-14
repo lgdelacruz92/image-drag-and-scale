@@ -1,5 +1,18 @@
 import React from "react";
 import Image from "image-drag-and-scale";
+import * as MaterialUI from "@material-ui/core";
+
+const useStyles = MaterialUI.makeStyles(theme => {
+  return {
+    container: {
+      position: "relative",
+      width: 500,
+      height: 500,
+      border: "2px solid red",
+      overflow: "hidden"
+    }
+  };
+});
 
 const App = props => {
   const imageData = {
@@ -17,18 +30,11 @@ const App = props => {
     index: 2
   };
 
+  const classes = useStyles();
+
   return (
     <div className="App">
-      <div
-        className="container"
-        style={{
-          position: "relative",
-          width: 1024,
-          height: 600,
-          border: "2px solid red"
-        }}
-      >
-        <div style={{ fontSize: 50 }}>Hello</div>
+      <div className={classes.container}>
         <Image data={imageData} />
       </div>
     </div>
