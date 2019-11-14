@@ -35,12 +35,11 @@ function App() {
     index: 2
   };
 
-  const containerRef = React.useRef();
-
+  // make sure your container is positioned relative
   return (
     <div className="App">
-      <div ref={containerRef} className="container">
-        <Image data={imageData} containerRef={containerRef} />
+      <div className="container">
+        <Image data={imageData} />
       </div>
     </div>
   );
