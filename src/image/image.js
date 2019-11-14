@@ -65,7 +65,7 @@ const Image = props => {
           // get type of action
 
           if (s.targetType === "transformer") {
-            const transformedData = handleTransform(e, containerRef, s);
+            const transformedData = handleTransform(e, s);
             return { ...s, data: transformedData };
           } else if (s.targetType === "translator") {
             const translatedData = handleTranslate(e, s);

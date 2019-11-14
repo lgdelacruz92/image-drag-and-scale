@@ -22,7 +22,6 @@ const App = props => {
   return (
     <div className="App">
       <div
-        ref={containerRef}
         className="container"
         style={{
           position: "relative",
@@ -32,7 +31,7 @@ const App = props => {
         }}
       >
         <div style={{ fontSize: 50 }}>Hello</div>
-        <Image data={imageData} containerRef={containerRef} />
+        <Image data={imageData} />
       </div>
     </div>
   );
