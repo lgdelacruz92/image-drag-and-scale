@@ -63,6 +63,13 @@ const App = props => {
 export default App;
 ```
 
+# Version Update
+
+## v1.1.3
+
+> Performance for multiple images is much better
+> Tested with 40 images inside a container
+
 ## License
 
 MIT © [lgdelacruz92](https://github.com/lgdelacruz92)
