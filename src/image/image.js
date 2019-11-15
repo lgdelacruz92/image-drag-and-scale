@@ -14,7 +14,7 @@ const useStyles = MaterialUI.makeStyles(theme => {
   };
 });
 
-const Image = props => {
+const Image = React.forwardRef((props, ref) => {
   const { data, containerRef } = props;
   const [state, setState] = React.useState({
     data: data,
@@ -99,6 +99,10 @@ const Image = props => {
     };
   }, [data, state.imageId, state.status]);
 
+  React.useEffect(() => {
+    ref.current = state;
+  }, [state]);
+
   return (
     <Translator data={state}>
       <Transformer data={state}>
@@ -110,6 +114,6 @@ const Image = props => {
       </Transformer>
     </Translator>
   );
-};
+});
 
 export default Image;

@@ -33,11 +33,16 @@ const App = props => {
 
   const classes = useStyles();
   const containerRef = React.useRef();
+  const imageRef = React.useRef();
+
+  React.useEffect(() => {
+    console.log(imageRef.current);
+  });
 
   return (
     <div className="App">
       <div ref={containerRef} className={classes.container}>
-        <Image data={imageData} containerRef={containerRef} />
+        <Image data={imageData} containerRef={containerRef} ref={imageRef} />
       </div>
     </div>
   );

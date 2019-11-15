@@ -70,6 +70,10 @@ export default App;
 > Performance for multiple images is much better
 > Tested with 40 images inside a container
 
+# beta version v1.1.5
+
+> This version is still being tested
+
 ## License
 
 MIT © [lgdelacruz92](https://github.com/lgdelacruz92)
