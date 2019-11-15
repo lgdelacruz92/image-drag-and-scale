@@ -35,14 +35,15 @@ const App = props => {
   const containerRef = React.useRef();
   const imageRef = React.useRef();
 
-  React.useEffect(() => {
-    console.log(imageRef.current);
-  });
-
   return (
     <div className="App">
       <div ref={containerRef} className={classes.container}>
-        <Image data={imageData} containerRef={containerRef} ref={imageRef} />
+        <Image
+          data={imageData}
+          containerRef={containerRef}
+          ref={imageRef}
+          onUpdate={() => console.log(imageRef.current)}
+        />
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ const useStyles = MaterialUI.makeStyles(theme => {
 });
 
 const Image = React.forwardRef((props, ref) => {
-  const { data, containerRef } = props;
+  const { data, containerRef, onUpdate } = props;
   const [state, setState] = React.useState({
     data: data,
     status: null,
@@ -101,7 +101,10 @@ const Image = React.forwardRef((props, ref) => {
 
   React.useEffect(() => {
     ref.current = state;
-  }, [state]);
+    if (onUpdate) {
+      onUpdate();
+    }
+  }, [state, onUpdate]);
 
   return (
     <Translator data={state}>
