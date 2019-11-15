@@ -17,12 +17,25 @@ npm install --save image-drag-and-scale
 ```jsx
 import React from "react";
 import Image from "image-drag-and-scale";
-import "./styles.css";
+import * as MaterialUI from "@material-ui/core";
 
-function App() {
+const useStyles = MaterialUI.makeStyles(theme => {
+  return {
+    container: {
+      position: "relative",
+      width: 500,
+      height: 500,
+      border: "2px solid red",
+      overflow: "hidden",
+      transform: "translate(100px, 200px)"
+    }
+  };
+});
+
+const App = props => {
   const imageData = {
-    x: 400,
-    y: 200,
+    x: 50,
+    y: 50,
     translateX: 0,
     translateY: 0,
     scaledWidth: 100,
@@ -35,15 +48,19 @@ function App() {
     index: 2
   };
 
-  // make sure your container is positioned relative
+  const classes = useStyles();
+  const containerRef = React.useRef();
+
   return (
     <div className="App">
-      <div className="container">
-        <Image data={imageData} />
+      <div ref={containerRef} className={classes.container}>
+        <Image data={imageData} containerRef={containerRef} />
       </div>
     </div>
   );
-}
+};
+
+export default App;
 ```
 
 ## License

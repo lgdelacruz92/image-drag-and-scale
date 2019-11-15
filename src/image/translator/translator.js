@@ -10,7 +10,10 @@ const useStyles = MaterialUI.makeStyles(theme => {
     },
     overlay: {
       position: "absolute",
-      transform: props => `translate(${props.x + 5}px,${props.y + 5}px)`,
+      transform: props =>
+        `translate(${props.x + props.translateX + 5}px,${props.y +
+          props.translateY +
+          5}px)`,
       width: props => props.scaledWidth - 10,
       height: props => props.scaledHeight - 10,
       pointerEvents: "auto",

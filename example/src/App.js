@@ -9,7 +9,8 @@ const useStyles = MaterialUI.makeStyles(theme => {
       width: 500,
       height: 500,
       border: "2px solid red",
-      overflow: "hidden"
+      overflow: "hidden",
+      transform: "translate(100px, 200px)"
     }
   };
 });
@@ -31,11 +32,12 @@ const App = props => {
   };
 
   const classes = useStyles();
+  const containerRef = React.useRef();
 
   return (
     <div className="App">
-      <div className={classes.container}>
-        <Image data={imageData} />
+      <div ref={containerRef} className={classes.container}>
+        <Image data={imageData} containerRef={containerRef} />
       </div>
     </div>
   );

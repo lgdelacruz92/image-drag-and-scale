@@ -15,7 +15,7 @@ const useStyles = MaterialUI.makeStyles(theme => {
 });
 
 const Image = props => {
-  const { data } = props;
+  const { data, containerRef } = props;
   const [state, setState] = React.useState({
     data: data,
     status: null,
@@ -24,8 +24,9 @@ const Image = props => {
     targetId: null
   });
   const classes = useStyles();
-
   React.useEffect(() => {
+    const containerRect = containerRef.current.getBoundingClientRect();
+
     const onMouseDown = e => {
       let theTargetType = null;
       let theTargetId = null;
@@ -55,31 +56,37 @@ const Image = props => {
     };
 
     const onMouseMove = e => {
-      setState(s => {
-        if (s.status === "mouse-down") {
+      if (state.status === "mouse-down") {
+        setState(s => {
           // get type of action
-
           if (s.targetType === "transformer") {
-            const transformedData = handleTransform(e, s);
-            return { ...s, data: transformedData };
+            const newEvent = {
+              clientX: e.clientX - containerRect.left,
+              clientY: e.clientY - containerRect.top
+            };
+            handleTransform(newEvent, s);
+            return { ...s };
           } else if (s.targetType === "translator") {
-            const translatedData = handleTranslate(e, s);
-            return { ...translatedData };
+            handleTranslate(e, s);
+            return { ...s };
           }
-        }
-        return { ...s };
-      });
+          return { ...s };
+        });
+      }
 
       e.preventDefault();
     };
 
     const onMouseUp = e => {
-      setState(s => ({
-        ...s,
-        status: "mouse-up",
-        targetType: null,
-        targetId: null
-      }));
+      if (state.status === "mouse-down") {
+        setState(s => ({
+          ...s,
+          status: "mouse-up",
+          targetType: null,
+          targetId: null
+        }));
+      }
+
       e.preventDefault();
     };
     document.addEventListener("mouseup", onMouseUp);
@@ -90,7 +97,7 @@ const Image = props => {
       document.removeEventListener("mousedown", onMouseDown);
       document.removeEventListener("mousemove", onMouseMove);
     };
-  }, [data, state.imageId]);
+  }, [data, state.imageId, state.status]);
 
   return (
     <Translator data={state}>
