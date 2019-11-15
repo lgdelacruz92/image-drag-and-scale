@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/image-drag-and-scale/static/css/main.a2b7b0b6.chunk.css",
-    "main.js": "/image-drag-and-scale/static/js/main.ea61dafb.chunk.js",
-    "main.js.map": "/image-drag-and-scale/static/js/main.ea61dafb.chunk.js.map",
+    "main.js": "/image-drag-and-scale/static/js/main.522b866d.chunk.js",
+    "main.js.map": "/image-drag-and-scale/static/js/main.522b866d.chunk.js.map",
     "runtime-main.js": "/image-drag-and-scale/static/js/runtime-main.3b643f8a.js",
     "runtime-main.js.map": "/image-drag-and-scale/static/js/runtime-main.3b643f8a.js.map",
     "static/js/2.9a97152e.chunk.js": "/image-drag-and-scale/static/js/2.9a97152e.chunk.js",
     "static/js/2.9a97152e.chunk.js.map": "/image-drag-and-scale/static/js/2.9a97152e.chunk.js.map",
     "index.html": "/image-drag-and-scale/index.html",
-    "precache-manifest.c5772eea1140574f6c720c60fe70f2ef.js": "/image-drag-and-scale/precache-manifest.c5772eea1140574f6c720c60fe70f2ef.js",
+    "precache-manifest.31d10b3d22c895782fc22834de58e140.js": "/image-drag-and-scale/precache-manifest.31d10b3d22c895782fc22834de58e140.js",
     "service-worker.js": "/image-drag-and-scale/service-worker.js",
     "static/css/main.a2b7b0b6.chunk.css.map": "/image-drag-and-scale/static/css/main.a2b7b0b6.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.3b643f8a.js",
     "static/js/2.9a97152e.chunk.js",
     "static/css/main.a2b7b0b6.chunk.css",
-    "static/js/main.ea61dafb.chunk.js"
+    "static/js/main.522b866d.chunk.js"
   ]
 }

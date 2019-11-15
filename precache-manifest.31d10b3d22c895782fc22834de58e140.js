@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bd66200512c739f72fb0aa9f94f2d856",
+    "revision": "49d16f5cbf463ef949ba95af45696a09",
     "url": "/image-drag-and-scale/index.html"
   },
   {
-    "revision": "da181caf0832cb4ef7f1",
+    "revision": "18b5564a595736dbf39b",
     "url": "/image-drag-and-scale/static/css/main.a2b7b0b6.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/image-drag-and-scale/static/js/2.9a97152e.chunk.js"
   },
   {
-    "revision": "da181caf0832cb4ef7f1",
-    "url": "/image-drag-and-scale/static/js/main.ea61dafb.chunk.js"
+    "revision": "18b5564a595736dbf39b",
+    "url": "/image-drag-and-scale/static/js/main.522b866d.chunk.js"
   },
   {
     "revision": "fc2b102b7ad970ff4525",
