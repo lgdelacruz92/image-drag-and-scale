@@ -1,4 +1,8 @@
-# image-drag-and-scale
+# This package is now deprecated
+
+# Please use react-image-drag-and-scale instead
+
+## image-drag-and-scale
 
 > This is a library that allows you to drag and scale an image within a div element
 
